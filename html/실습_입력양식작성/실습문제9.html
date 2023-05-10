@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            
+        }
+    </style>
 </head>
 <body>
     <h1>회원가입</h1>
@@ -13,29 +19,30 @@
             <legend>필수 입력 사항</legend>
             <table>
                 <tr>
-                    <td style='text-align: center;'><b>ID</b></td>
-                    <td><input type="text"  name='id' id='id' 
+                    
+                    <td style='text-align: center;'><label for="userId"><b>ID</b></label></td>
+                    <td><input type="text"  name='userId' id='userId'  maxlength='10'
                                 placeholder='아이디 10글자 이내'></td>
                     <td><input type="submit"></td>
                 </tr>
                 <tr>
-                    <td style='text-align: center;'><b>비밀번호</b></td>
-                    <td><input type="text" name='pw' id='pw'
+                    <td style='text-align: center;'><label for="userPw"><b>비밀번호</b></label></td>
+                    <td><input type="text" name='userPw' id='userPw'  maxlength='8'
                                 placeholder='영문, 숫자,특수문자 포함 8자 이상'></td>
                 </tr>
                 <tr>
-                    <td style='text-align: center;'><b>비밀번호 확인</b></td>
-                    <td><input type="text" name='check' id='check'></td>
+                    <td style='text-align: center;'><label for="check"><b>비밀번호 확인</b></label></td>
+                    <td><input type="text" name='check' id='check'  maxlength='8'></td>
                 </tr>
                 <tr>
-                    <td style='text-align: center;'><b>Email</b></td>
+                    <td style='text-align: center;'><label for="email"><b>Email</b></label></td>
                     <td><input type="text" name='email' id='email'></td>
                     <td>
                         <select>
                             <option value="no" selected>직접입력</option>
-                            <option value="naver">naver.com</option>
-                            <option value="daum">daum.net</option>
-                            <option value="google">gmail.com</option> 
+                            <option value="naver.com">naver.com</option>
+                            <option value="daum.net">daum.net</option>
+                            <option value="gmail.com">gmail.com</option> 
                         </select>
                     </td>
                 </tr>
@@ -44,36 +51,42 @@
 
         <fieldset>
             <legend>추가 정보</legend>
-            프로필 사진 : <input type="file" multiple> 
+            <ul>
+                <li>
+                    프로필 사진 : <input type="file" multiple> 
+                </li><br>
+               
+                <li>
+                    성별 : <input type="radio" name='gender' value='M'> 남자  
+                   <input type="radio" name='gender' value='F'> 여자
+                </li><br>
             
-            <br><br>
+                <li>
+                    생년월일 : <input type="date" name='birth' id='birth'>
+                </li><br>
 
-            성별 : <input type="radio" name='gender' value='M'> 남자  
-                   <input type="radio" name='gender' i value='F'> 여자
+                <li>
+                    취미 : <br>
+                    <label><input type="checkbox" name='hobby' value='baseball'>야구</label>
+                    <label><input type="checkbox" name='hobby' value='football'>축구</label>
+                    <label><input type="checkbox" name='hobby' value='baskeball'>농구</label> <br>
+                    <label><input type="checkbox" name='hobby' value='study'>공부</label>
+                    <label><input type="checkbox" name='hobby' value='music'>음악감상</label> <br>
+                    <label><input type="checkbox" name='hobby' value='opinions'> 기타</label> : <input type="text" name='opinions' id='opinions'>
+                </li><br>
 
-            <br><br>
-            
-            생년월일 : <input type="date" name='birth' id='birth'>
-
-            <br><br>
-
-            취미 : <br>
-            <input type="checkbox" name='hobby' value='baseball'>야구
-            <input type="checkbox" name='hobby' value='football'>축구
-            <input type="checkbox" name='hobby' value='baskeball'>농구 <br>
-            <input type="checkbox" name='hobby' value='study'>공부
-            <input type="checkbox" name='hobby' value='music'>음악감상 <br>
-            <input type="checkbox" name='hobby' value='opinions'> 기타 : <input type="text" name='opinions' id='opinions'>
-
-            <br><br>
-            
-            자기소개 <br>
-            <textarea name="" id="" cols="50" rows="4"></textarea>
+                <li>
+                    자기소개 <br>
+                    <textarea name="" id="" cols="50" rows="4"></textarea>
+                </li>
+            </ul> 
         </fieldset>
+        <p>
+            <input type="submit" value='회원가입'>
+            <input type="reset" value='다시입력'>
+            <input type="button" value='회원가입'>
+        </p>
 
-        <input type="submit" value='회원가입'>
-        <input type="reset" value='다시입력'>
-        <input type="button" value='회원가입'>
     </form>
 </body>
 </html>
