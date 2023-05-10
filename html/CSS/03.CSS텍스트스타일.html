@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 텍스트 스타일</title>
+    <!-- 내부 스타일 -->
+    <style>
+        /* 구글 폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+        #ff1{
+            font-family: "궁서체";
+        }
+        #ff2{
+            font-family: "굴림체";
+        }
+        /*
+        글꼴이 없는 경우를 대비해서
+         ,를 이용해서 여러글꼴을 나열 할수 있음*/
+        #ff3{
+            font-family: "없는글꼴", "궁서>ㅇ<", "고딕";
+        }
+
+        /* 웹폰트 */
+        h1{
+            color: lightcoral;
+            /* 글꼴 */
+            font-family: 'Gugi', cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1>텍스트 스타일</h1>
+
+    <h2>font-family</h2>
+    텍스트의 글꼴을 지정할때 사용
+
+    <p id='ff1'>글꼴 변경 테스트1</p>
+    <p id='ff2'>글꼴 변경 테스트2</p>
+    <p id='ff3'>글꼴 변경 테스트3</p>
+</body>
+</html>
