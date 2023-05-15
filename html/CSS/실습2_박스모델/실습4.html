@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>애완견 돌보기</title>
+	<style>
+		*{
+			margin: 0px;
+			box-sizing: border-box;
+		}
+		nav ul{
+			list-style: none;
+		}
+		li{
+            width: 90px;
+            height: 30px;
+            float: left;
+            margin: 5px;
+        }
+		a{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            line-height: 85px;
+            text-align: center;
+            text-decoration: none;
+			color: white;
+            font-weight: 800;
+            font-size: 11pt;
+        }
+		h1{
+			margin-left: 20px;
+			margin-right: 200px;
+			float: left;
+			text-align: center;
+			height: 100px;
+            line-height: 100px;
+		}
+		header{
+			background-color: skyblue;
+			height: 100px;
+			width: 800px;
+		}
+		section{
+			position: relative;
+			
+
+			color: white;
+			font-weight: 800;
+			border: 5px solid black;
+			border-bottom: 20px solid black;
+			box-sizing: border-box;
+			border-style: inset;
+			height: 500px;
+			width: 800px;
+		}
+		#container{
+          width: 800px;
+		  margin: 0 auto;
+        }
+		.imgbox{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 10px;
+			background: url(../images/book.png) no-repeat;
+			background-size: contain;
+		}
+		.pricebox{
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 10px;
+			padding-top: 30px;
+			text-align: center;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		.imgbox:hover{
+			position: absolute;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			border: 1px solid orange;
+			padding: 20px;
+			margin: 20px;
+		}
+		.borderbox{
+			box-sizing: border-box;
+		}
+		.contentbox{
+			box-sizing: content-box;
+		}
+	</style>
+</head>
+<body>
+	<div id='container'>
+		<header>
+			<h1>애완견 종류</h1>
+			<nav>
+				<ul>
+				<li><a href="#">애완견 종류</a></li>
+				<li><a href="#">입양하기</a></li>
+				<li><a href="#">건강돌보기</a></li>
+				<li><a href="#">더불어살기</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+			<div class='imgbox'>
+
+			</div>
+			<div class='pricebox'>
+				웹디자인 인문<br>
+				가격 : 1,000원<br>
+				사러가기
+			</div>
+		</section>
+		<footer>
+			<p>Copyright 2012 funnycom</p>
+		</footer>
+	</div>
+
+	<div class='box borderbox'>border box</div>
+	<div class='box contentbox'>content box</div>
+</body>
+</html>

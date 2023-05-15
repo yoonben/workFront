@@ -7,38 +7,203 @@
     <title>CSS 텍스트 스타일</title>
     <!-- 내부 스타일 -->
     <style>
-        /* 구글 폰트 */
-        @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
-
-        #ff1{
-            font-family: "궁서체";
-        }
-        #ff2{
-            font-family: "굴림체";
-        }
-        /*
-        글꼴이 없는 경우를 대비해서
-         ,를 이용해서 여러글꼴을 나열 할수 있음*/
-        #ff3{
-            font-family: "없는글꼴", "궁서>ㅇ<", "고딕";
-        }
-
-        /* 웹폰트 */
-        h1{
-            color: lightcoral;
-            /* 글꼴 */
-            font-family: 'Gugi', cursive;
-        }
+        
     </style>
+
+    <!-- 외부 스타일 -->
+    <link rel="stylesheet" href="03.CSS텍스트스타일.CSS">
 </head>
 <body>
     <h1>텍스트 스타일</h1>
-
-    <h2>font-family</h2>
+    <!--
+        인라인 스타일
+        우선순위가 높아진ㅂ니다
+        외부파일로 불리하기가 어렵다
+    -->
+    <h2 style='font-size: 2em;'>1.font-family</h2>
     텍스트의 글꼴을 지정할때 사용
 
     <p id='ff1'>글꼴 변경 테스트1</p>
     <p id='ff2'>글꼴 변경 테스트2</p>
     <p id='ff3'>글꼴 변경 테스트3</p>
+
+    <p class='web-font'>
+        웹 폰트 사용 <br>
+        <a href="https://fonts.google.com/">구글 웹 폰트</a> <br>
+        style태그안에 @import한 후 사용가능 
+    </p>
+
+     <hr>
+
+    <h2>2. font-size</h2>
+    텍스트의 크기를 변경할 때 사용
+    <ul>
+        <li id='size1'>px 테스트</li>
+        <li id='size2'>em 테스트</li>
+        <li id='size3'>% 테스트</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. font-weight</h2>
+    텍스트의 두께를 변결할 때 사용
+    <ul>
+        <li>원래굵기</li>
+        <li id='fw1'>굵은 글꼴</li>
+        <li id='fw2'>가늘게</li>
+        <li id='fw3'>굵게</li>
+    </ul>
+
+    <hr>
+
+    <h2>4.font-variant</h2>
+    <p>I LOVE YOU</p>
+    <!-- 작은 대문자(소문자 크기의 대문자)로 변경할때 사용 -->
+    <P id='fv'>i love you</P>
+
+    <hr>
+
+    <h3>5.font- style</h3>
+    텍스트의 기울임을 지정할때 사용
+    <ul>
+        <li>기울임 없음</li>
+        <li id='fs1'>italic 기울임</li>
+        <li id='fs2'>oblique 기울임</li>
+    </ul>
+
+    <hr>
+
+    <h2>6. color</h2>
+    텍스트의 색상을 지정 할때 사용
+    <ul>
+        <li id='c-name'>색상명으로 지정</li>
+        <li id='c-16'>16진수값으로 지정</li>
+        <li id='c-rgb'>rgb로 설정</li>
+        <li id='c-rgba'>rgba로 설정</li>
+    </ul>
+
+    <hr>
+
+    
+
+    <h2>7. text-decoration</h2>
+    텍스트에 줄을 그을때 사용(위, 아래, 중간)
+    <ul>
+        <li id='td-none'>none</li>
+        <li id='td-underline'>underline</li>
+        <li id='td-overline'>overline</li>
+        <li id='td-line-through'>line-through</li>
+        <a href="test.html">test링크</a>
+    </ul>
+
+    <hr>
+
+    <h2>8. text-shadow</h2>
+    텍스트에 그림자 효과를 추가
+    <br> text-shadow : 가로거리 세로거리 번짐정도 색상 <br>
+
+    양수 글자의 오른쪽, 아래쪽 <br>
+    음수 글자의 왼쪽, 위쪽 <br>
+
+    번짐정도 : 양수값 그림자가 모든 방향으로 퍼져 나가므로 크게 표현 <br>
+
+    <div id='bg'>
+        <span id='ts1'>HTML5</span>
+        <span id='ts2'>CSS</span>
+        <span id='ts3'>javaScript</span>
+    </div>
+
+    <hr>
+
+    <h2>9. text-transform</h2>
+    영문 텍스트의 대소문자 반환
+    <ul>
+        <li id='tt1'>none</li>
+        <li id='tt2'>capitalize hello</li>
+        <li id='tt3'>uppercase</li>
+        <li id='tt4'>LOWER CASE</li>
+    </ul>
+    <hr>
+    <h2>10. line-height</h2>
+        문장사이의 준간격을 조정하고 싶을때
+        <p class='lh1'>
+            Integer elementum massa at nulla placerat varius.
+            Suspendisse in libero risus, in interdum massa.
+            Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+            Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+        </p>
+        
+        <p class='lh2'>
+            Integer elementum massa at nulla placerat varius.
+            Suspendisse in libero risus, in interdum massa.
+            Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+            Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+        </p>
+
+        <p class='lh3'>
+            Integer elementum massa at nulla placerat varius.
+            Suspendisse in libero risus, in interdum massa.
+            Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+            Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+        </p>
+        	 	
+        <p class='lh4'>
+            Integer elementum massa at nulla placerat varius.
+            Suspendisse in libero risus, in interdum massa.
+            Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+            Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+        </p>
+
+        <h1>목록 스타일</h1>
+
+        <h2>순서 없는 목록 스타일</h2>
+
+        <ul style='list-style-type: disc;'>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>JQuery</li>
+        </ul>
+
+        <ul style='list-style-type: square; list-style-position: inside;'>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>JQuery</li>
+        </ul>
+        
+        <ul style='list-style-type: none;'>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>JQuery</li>
+        </ul>
+
+        <ul style='list-style-image: url(../images/dot.png);'>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>JQuery</li>
+        </ul>
+
+
+    <table>
+        <caption>웹 브라우저의 종류</caption>
+        <tr>
+            <th>브라우저</th>
+            <th>제조사</th>
+            <th>홈페이지</th>
+        </tr>
+        <tr>
+            <td>익스플로러</td>
+            <td>MS</td>
+            <td>https://www.microsoft.com</td>
+        </tr>
+        <tr>
+            <td>파이어폭스</td>
+            <td>Mozila</td>
+            <td>https://www.Mozila.com</td>
+        </tr>
+    </table>
 </body>
 </html>
