@@ -1,0 +1,52 @@
+/* 후손 선택자 */
+section h1{
+    background-color: black;
+    color: white;
+}
+/* 자식 선택자 */
+section > p {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* 인접 선택자 */
+#div-test + div{
+    background-color: rgb(245, 199, 138);
+}
+
+/* #div-test ~ div{
+    font-weight: 700;
+    color : #333;
+} */
+
+#room + p{
+    background-color: #ccc;
+}
+ 
+/* id 속성을 가진 요소를 선택 */
+.div-class[id]{
+    border: 1px solid black;
+}
+
+/* div 중에 name 속성값이 name1과 일치하는 태그 */
+.div-class[id=name1]{
+    background-color: pink;
+}
+
+/* div 중에 class속성에서 class로 시작되는 태그 */
+.div-class[class^=div]{
+    color: #ccc;;
+}
+
+/* id 속성의 값이 name을 포함하는 */
+.div-class[id*=name]{
+    background-color: red;
+}
+
+/* class 속성의 값이 class로 끝나는 */
+div[class$=class]{
+    padding: 20px;
+}
+
+/* class 속성의 값에 p20아 포함 되어 있는 경우
+속성겂이 띄어쓰기로 구분 */

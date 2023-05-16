@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            /* 콘텐츠 + 패팅 +보더를 포함 */
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            margin: 0 auto;
+            width: 1000px;
+            height: 800px;
+
+        }
+
+        header {
+            width: 100%;
+            height: 120px;
+
+        }
+
+        main {
+            width: 100%;
+            height: 600px;
+
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            background: url(images/footer.jpg) bottom no-repeat;
+            background-size: 70% 90%;
+        }
+
+        header .logo {
+            width: 100%;
+            height: 90px;
+
+        }
+
+        header nav {
+            width: 100%;
+            height: 30px;
+            background-color: green;
+        }
+
+        main aside.leftSide {
+            width: 15%;
+            height: 600px;
+
+            float: left;
+        }
+
+        main>section {
+            width: 55%;
+            height: 100%;
+
+
+            float: left;
+        }
+
+        main aside.rightSide {
+            width: 30%;
+            height: 100%;
+
+            float: left;
+        }
+
+        ul {
+            list-style: none;
+            width: 100%;
+            height: 30px;
+            padding: 0px;
+        }
+
+        li {
+            float: left;
+            margin: 0px;
+            width: 250px;
+            text-align: center;
+        }
+
+        li a {
+            color: white;
+            text-decoration: none;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #log1 {
+            width: 15%;
+            height: 100%;
+            background: url(images/logo.jpg) no-repeat;
+
+            background-size: 100% 100%;
+            float: left;
+        }
+
+        #log2 {
+            width: 55%;
+            height: 100%;
+            background: url(images/mainlogo.jpg) no-repeat;
+            margin-left: 50px;
+
+            background-size: 100% 100%;
+            float: left;
+        }
+
+        #left_img {
+            width: 140px;
+            height: 590px;
+            margin-top: 10px;
+        }
+
+        #login_wrap {
+            margin-top: 10px;
+            width: 280px;
+            height: 110px;
+            margin-left: 10px;
+
+
+        }
+
+        #login_form {
+            width: 280px;
+            height: 80px;
+
+        }
+
+        #login_form_input {
+            width: 200px;
+            height: 80px;
+            float: left;
+
+        }
+
+        #login_form_input>input {
+            width: 100%;
+            height: 50%;
+        }
+
+        #login_form_btn {
+            width: 80px;
+            height: 80px;
+            float: left;
+
+        }
+
+        #login_form_btn>input {
+            width: 80%;
+            height: 70%;
+
+            margin-left: 14px;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        #login_link {
+            width: 230px;
+            height: 20px;
+            margin-left: 50px;
+        }
+
+        #login_link>a {
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 0.7em;
+        }
+
+        #rightSide_img1 {
+            width: 290px;
+            margin-left: 10px;
+            height: 325px;
+            background: url(images/right_img.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #rightSide_img2 {
+            width: 290px;
+            margin-top: 5px;
+            margin-left: 10px;
+            height: 150px;
+
+            background: url(images/me_chat.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        main>section>div {
+            width: 255px;
+            margin-left: 10px;
+            margin-right: 10px;
+            height: 260px;
+            margin-top: 20px;
+
+            float: left;
+            font-size: 0.8em;
+            text-align: center;
+        }
+
+        main>section>div>img {
+            width: 255px;
+            height: 230px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='wrap'>
+        <header>
+            <div class='logo'>
+                <div id='log1'></div>
+                <div id='log2'></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" title="us-english">HOME</a></li>
+                    <li><a href="#" title="ja">Profile</a></li>
+                    <li><a href="#" title="chn">Board</a></li>
+                    <li><a href="#" title="chn">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- 사이드바 -->
+            <aside class='leftSide'>
+                <img src="images/left_img.jpg" alt="" id='left_img'>
+            </aside>
+            <section>
+                <div id='main_img1'>
+                    <img src="images/main_img1.jpg" alt="">
+                    나무를 심는 사람들
+                </div>
+                <div id='main_img2'>
+                    <img src="images/main_img2.jpg" alt="">
+                    아이들에게 녹색 미래를...
+                </div>
+                <div id='main_img3'>
+                    <img src="images/main_img3.jpg" alt="">
+                    설악산을 살리는 길
+                </div>
+                <div id='main_img4'>
+                    <img src="images/main_img4.jpg" alt="">
+                    사라지는 북극곰들
+                </div>
+            </section>
+            <aside class='rightSide'>
+                <div id='login_wrap'>
+                    <form id='login_form' action="" method=''>
+                        <div id='login_form_input'>
+                            <input type="text" name='' id='' placeholder='아이디를 입력하세요.'>
+                            <input type="text" name='' id='' placeholder='비밀번호를 입력하세요.'>
+                        </div>
+                        <div id='login_form_btn'>
+                            <input type="submit" value='로그인' id="">
+                        </div>
+                    </form>
+                    <div id='login_link'>
+                        <a href="">회원가입</a>
+                        <a href="">ID/PW 찾기</a>
+                    </div>
+                </div>
+                <div id='rightSide_img1'>
+                </div>
+                <div id='rightSide_img2'>
+                </div>
+            </aside>
+        </main>
+
+        <footer> </footer>
+    </div>
+</body>
+
+</html>
