@@ -1,0 +1,222 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+#container{
+    margin: 0px auto;
+    width: 1200px;
+}
+header{
+    background-color: rgb(31, 130, 223);
+    width: 1200px;
+    height: 100px;
+}
+#logo{
+    float: left;
+}
+head span{
+    position: absolute;
+}
+#logo>a>h1{
+    text-align: center;
+    width: 230px;
+    color: white;
+    display: inline-block;
+    line-height: 90px;
+}
+header nav ul{
+    width: 1000px;
+}
+
+header nav>ul>li{
+    width: 500px;
+    position: relative;
+    display: inline;
+    top: 70px;
+}
+
+header nav ul li a{
+    display: inline-block;
+    width: 180px;
+    color: white;
+    text-align: center;
+}
+#sub1{
+    margin-left: 204px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: 1s;
+}
+#sub2{
+    margin-left: 400px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: 1s;
+}
+
+.submenu{
+    background-color: rgb(31, 130, 223);
+    width: 100%;
+    line-height: 50px;
+    padding-left: 10px;
+    position: absolute;
+}
+
+#menu1>a:hover+#sub1, #sub1:hover{
+    max-height: 500px;
+}
+
+#menu2>a:hover+#sub2, #sub2:hover{
+    max-height: 500px;
+}
+#slides{
+    width: 1200px;
+    height: 300px;
+}
+#slides div img{
+    width: 1200px;
+    height: 300px;
+}
+
+#contents{
+    width: 1200px;
+    height: 340px;
+}
+
+#tabMenu{
+    top: 30px;
+    width: 600px;
+    position: relative;
+    height: 300px;
+    float: left;
+}
+ #tabMenu input[type=radio]{
+    display: none;
+}
+
+#tabMenu label{
+    display: inline-block;
+    padding: 20px;
+    margin: 0px;
+    color: gray;
+    font-weight: bold;
+    height: 20px;
+}
+
+#tabMenu label:hover{
+    color: red;
+}
+
+#tabMenu input:checked + label{
+    box-shadow: 0px 1px 5px #222;
+    color: darkred;
+}
+
+.tabContent{
+    display: none;
+    padding: 0px 20px;
+    line-height: 2;
+    position: absolute;
+
+    left: 0;
+    top: 90px;
+    width: 100%;
+}
+
+#tab1:checked ~ #notice
+,#tab2:checked ~ #gallery{
+            display: block;
+}
+
+#gallery li{
+    list-style: none;
+    display: inline;
+}
+
+#gallery li img{
+    width: 150px;
+}
+#links{
+    width: 600px;
+    height: 330px;
+    float: left;
+    
+}
+
+#links>ul>li{
+    display: inline-block;
+    padding: 20px;
+    padding-top: 40px;
+    width: 150px;
+    height: 300px;
+}
+#links>ul>li>a span{
+    color: black;
+    line-height: 60px;
+    padding-left: 40px;
+}
+#links>ul>li img{
+    border-radius: 50%;
+}
+
+footer{
+    border-top: 3px solid ;
+    width: 1200px;
+}
+
+#bottomMenu{
+    width: 1200px;
+    height: 80px;
+  
+}
+
+#bottomMenu>ul>li{
+    float: left;
+    padding: 20px;
+}
+
+#bottomMenu>ul>li a{
+    color: black;
+    font-weight: 800px;
+}
+
+#sns{
+    width: 700px;
+    height: 70px;
+    float: left;
+}
+#sns1{
+    width: 30px;
+    height: 30px;
+    background: url(images/sns-1.png) no-repeat;
+    float: left;
+    margin-left: 590px;
+    margin-top: 50px;
+    margin-right: 10px;
+}
+#sns2{
+    width: 30px;
+    height: 30px;
+    background: url(images/sns-2.png) no-repeat;
+    float: left;
+    margin-top: 50px;
+    margin-right: 10px;
+}
+#sns3{
+    width: 30px;
+    height: 30px;
+    background: url(images/sns-3.png) no-repeat;
+    margin-top: 50px;
+    float: left;
+}
+#company{
+    width: 600px;
+    height: 50px;
+    padding-left: 20px;
+    float: left;
+}
+#company>p{
+    color: gray;
+}

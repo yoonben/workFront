@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #tabMenu input[type=radio]{
+            display: none;
+        }
+
+        #tabMenu label{
+            /* border: 1px solid black; */
+            display: inline-block;
+            padding: 20px;
+            margin: 0px;
+            color: gray;
+            font-weight: bold;
+            height: 60px;
+        }
+        #tabMenu label:hover{
+            color: black;
+        }
+
+        #tabMenu input:checked + label{
+            border: 1px solid #ccc;
+            background-color: #ddd;
+            color: darkred;
+        }
+
+        .tabContent{
+            display: none;
+            border-top: 1px solid #ddd;
+            padding: 0px 20px;
+            line-height: 2;
+            position: absolute;
+
+            left: 0;
+            top: 67px;
+            width: 100%;
+        }
+
+        #tab_btn_notice:checked ~ #notice
+        ,#tab_btn_gallery:checked ~ #gallery{
+            display: block;
+        }
+
+        #content{
+            width: 500px;
+        }
+        #tapMenu{
+            width: 100%;
+            position: relative;
+        }
+        #gallery li{
+            list-style: none;
+            display: inline;
+        }
+
+        #gallert ul img{
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='content'>
+        <div id='tabMenu'>
+            <!-- 둘중 하나만 선택 할 수 있도록 이름을 갖게 설정 -->
+            <input type="radio" name="tabs" id="tab_btn_notice">
+            <!-- 라벨이 선택되도 checked되어 집니다 -->
+            <label for="tab_btn_notice">공지사항</label>
+            <input type="radio" name="tabs" id="tab_btn_gallery" checked>
+            <label for="tab_btn_gallery">갤러리</label>
+            <!-- 공지사항 -->
+            <article id='notice' class='tabContent'>
+                <ul>
+                    <li>게시글1</li>
+                    <li>게시글2</li>
+                    <li>게시글3</li>
+                    <li>게시글4</li>
+                    <li>게시글5</li>
+                </ul>
+            </article>
+
+            <!-- 갤러리 -->
+            <article id='gallery' class='tabContent'>
+                <ul>
+                    <li><img src="images/cup-1.jpg" alt=""></li>
+                    <li><img src="images/cup-2.jpg" alt=""></li>
+                    <li><img src="images/cup-3.jpg" alt=""></li>
+                    <li><img src="images/cup-4.jpg" alt=""></li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>
