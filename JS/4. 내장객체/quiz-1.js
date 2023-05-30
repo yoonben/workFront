@@ -1,5 +1,10 @@
 window.onload = function(){
-    register.addEventListener('click',function(){
+    register.addEventListener('click',function(e){
+       
+        // 버튼이 1개인 경우 submit 버튼으로 동작
+        // 기본이벤트를 제거
+        e.preventDefault();
+
         let name = document.getElementById('username').value;
         let major = document.getElementById('major').value;
 
@@ -17,8 +22,8 @@ window.onload = function(){
         trNode.appendChild(tdNode1);
         trNode.appendChild(tdNode2);
         
-        let tbody = document.querySelector('tbody');
-
+        let tbody = document.querySelector('#attendant > tbody');
+        
         tbody.appendChild(trNode);
     })
 }
